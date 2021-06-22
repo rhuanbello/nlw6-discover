@@ -28,11 +28,11 @@ html {
 body {
     height: 100vh; 
     background: var(--background);
+    display: flex;
 }
 
 body, button, input, textarea {
     font-size: clamp(14px, 1.6rem, 2vw);  
-    
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -82,7 +82,13 @@ button:hover, .button:hover {
     filter: brightness(1.2);
 }
 
-button > img 
+/* button > img 
+.button > img{
+    margin-right: 1rem;
+    width: 2rem;
+} */
+
+button > img,
 .button > img{
     margin-right: 1rem;
     width: 2rem;
