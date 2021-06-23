@@ -21,6 +21,7 @@ html {
     --grey-dark: #4D5E77;
     --grey-blue: #A1B2CD;
     --grey-light: #E5EAF1;
+    --grey-medium: #EAECF2;
     /* Tamanho de Fonte Padrão (10px) */
     font-size: 62.5%;
 }
@@ -82,14 +83,7 @@ button:hover, .button:hover {
     filter: brightness(1.2);
 }
 
-/* button > img 
-.button > img{
-    margin-right: 1rem;
-    width: 2rem;
-} */
-
-button > img,
-.button > img{
+button > img, .button > img{
     margin-right: 1rem;
     width: 2rem;
 }
@@ -99,6 +93,27 @@ button.outlined, .button.outlined{
     color: var(--blue);
     border: .2rem solid var(--blue);
 }
+
+button.red, .button.red {
+    background: var(--red);
+    color: var(--white);
+    transition: .2s;
+}
+
+button.grey, .button.grey {
+    background: var(--grey-light);
+    color: var(--grey-dark);
+    transition: .2s;
+}
+
+
+button.red:hover, .button.red:hover, button.grey:hover, .button.grey:hover {
+    background: var(--blue);
+    color: var(--white);
+    filter: 0;
+}
+
+/* Header */
 
 .content header {
     width: 80%;
