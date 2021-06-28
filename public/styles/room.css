@@ -1,0 +1,196 @@
+body {
+    height: auto;
+}
+
+.content{
+    width: 80%;
+    padding-bottom: 3.5rem;
+}
+
+#room header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#room header .buttons{
+    display: flex;
+    
+}
+
+#room header .buttons .button:nth-child(1){
+    margin-right: .8rem;
+    padding: 1.3rem 1.6rem;
+    
+}
+
+#room header .buttons .button:nth-child(1) img{
+    margin-left: 1rem;
+    margin-right: 0;
+    /* Zerado pois está pegando a margin-right 1rem do global.css */
+    width: 2rem;
+    height: 2rem;
+}
+
+#room header .buttons .button:nth-child(2){
+    padding: 1.3rem 3.2rem;
+}
+
+#room header .buttons .button:nth-child(2) img{
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Main */
+
+#question-form h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 4.2rem;
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2.4rem;
+}
+
+#question-form form {
+    border: .2rem solid var(--grey-blue);
+    padding: 1.6rem;
+    border-radius: 0 .8rem .8rem .8rem;
+    margin-bottom: 1.6rem;
+}
+
+#question-form textarea {
+    resize: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+}
+
+#question-form form textarea::placeholder {
+    color: var(--grey-blue);
+
+}
+
+#question-form form footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#question-form form footer > div {
+    display: flex;
+    align-items: center;
+    color: var(--icon-details);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    
+}
+
+#question-form form footer > div img {
+    margin-right: .9rem;
+}
+
+#question-form form footer button {
+    height: auto;
+    padding: .8rem 2.4rem;
+    line-height: 2.4rem;
+}
+
+
+/* Question Wrapper */
+
+.question-wrapper {
+    background: var(--light-blue);
+    padding: 2.4rem 3.2rem 2.4rem 2.4rem;
+    margin-bottom: .8rem;
+    border-radius: 0 .8rem .8rem .8rem;
+}
+
+.question-wrapper .question-content {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    
+}
+
+.question-wrapper .question-content .user {
+    background: var(--blue);
+    clip-path: circle();
+    padding: 1.4rem;
+}
+
+.question-wrapper .question-content .question p {
+    color: var(--black);
+    margin-left: 1.6rem;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    min-height: 5.2rem;
+    line-height: 2.4rem;
+}
+
+.question-wrapper .actions{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.question-wrapper .actions a {
+    color: var(--grey-dark);
+    display: flex;
+    align-items: center;
+}
+
+.question-wrapper .actions a + a{
+    margin-left: 2.4rem;
+}
+
+.question-wrapper .actions a img {
+    margin-right: .8rem;
+}
+
+/* Question Read */
+
+.question-wrapper.read {
+    background: var(--grey-medium);
+}
+
+.question-wrapper.read .question-content .user {
+    background: var(--grey-blue);
+}
+
+.question-wrapper.read .actions a{
+    /* cursor: default;  */
+}
+
+/* No questions */
+
+.noquestion {
+    text-align: center;
+    margin-top: 5.2rem;
+}
+
+
+.noquestion p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    
+}
+
+.noquestion p + p  {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 1.3rem;
+    line-height: 1.9rem;
+}
+
+
+.noquestion img {
+   max-width: 100%;
+   margin-bottom: 1.2rem;
+}
