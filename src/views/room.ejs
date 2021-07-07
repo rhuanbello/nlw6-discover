@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Rocket.Q - Perguntas e Respostas</title>
+        <!-- Padrão de Linguagem UTF-8 Pt-BR / View Port / Compatbilidade -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- CSS Links -->
+        <link rel="stylesheet" href="/styles/global.css">
+        <link rel="stylesheet" href="/styles/room.css">
+        <link rel="stylesheet" href="/styles/modal.css">
+        <!-- FONTS by Googlefonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- SCRIPT -->
+        <script src="/scripts/main.js" defer type="module"></script>
+    </head>
+    <body>
+        <div class="container-fthr">
+            <header class="header">
+                <nav class="content">
+                    <a href="/" class="logo">
+                        <img src="/images/logo.svg" alt="">
+                    </a>
+                    <div class="buttons">
+                        <div class="btn-outlined" id="room-id" data-id="<%= roomId %>"> Código da sala:
+                            #<%= roomId %>
+                        </div>
+                        <a href="/create-room" class="btn-white">
+                            Criar sala
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <main class="container-sn">
+                <div class="content">
+                    <main>
+                        <section id="question-form">
+                            <h2>Faça sua pergunta, Tripulante!</h2>
+                            <form action="/question/create/<%= roomId %>" method="POST">
+                                <textarea name="question" id="question" placeholder="O que você quer perguntar?"></textarea>
+                                <footer>
+                                    <div>
+                                        <img src="/images/lock.svg" alt="Cadeado">
+                                        Esta pergunta é anônima
+                                    </div>
+                                    <button class="btn-gradient send">Enviar</button>
+                                </footer>
+                            </form>
+                        </section>
+                        <section id="questions">
+                            <div class="questions">
+
+                                <% if(isNoQuestions){ %>
+                                    <%- include('parts/no-question') %>
+                                <% } %>
+        
+                                <% questions.forEach(question => { %>
+
+                                <div class="question-wrapper">
+                                    <div class="question-content">
+                                        <div class="user">
+                                            <img src="/images/Avatar.svg" alt="Avatar">
+                                        </div>
+                                        <div class="question">
+                                             <p><%= question.title %></p>
+                                        </div> 
+                                    </div>
+                                    <div class="actions">
+                                        <a href="#" class="check" data-id="<%= question.id %>">
+                                            <img src="/images/check.svg" alt="Marcar como Lido">
+                                            Marcar como lida
+                                        </a>
+                                        <a href="#" class="delete" data-id="<%= question.id %>">
+                                            <img src="/images/trash.svg" alt="Excluir">
+                                            Excluir
+                                        </a>
+                                    </div>
+                                </div>
+                            <% }); %>
+                    
+                            <% questionsRead.forEach(questionRead => { %>
+                                <div class="question-wrapper read">
+                                    <div class="question-content">
+                                        <div class="user">
+                                            <img src="/images/Avatar.svg" alt="Avatar">
+                                        </div>
+                                        <div class="question">
+                                            <p><%= questionRead.title %></p>
+                                        </div> 
+                                    </div>
+                                    <div class="actions">
+                                        <a href="#" class="delete" data-id="<%= questionRead.id %>">
+                                            <img src="/images/trash.svg" alt="Excluir">
+                                            Excluir
+                                        </a>
+                                    </div>
+                                </div>
+                            <% }); %>
+
+                        </div>
+                     </section>
+                    </main>
+                </div>
+            </main>
+        </div>
+        <div class="modal-wrapper">
+            <div class="modal">
+                <h2>Excluir pergunta</h2>
+                <p>Tem certeza que você deseja excluir esta pergunta?</p>
+                <form action="" method="POST">
+                    <input type="password" id="password" name="password" placeholder="Digite a senha da sala ">
+                    <div class="buttons">
+                        <div class="btn-w-modal button cancel">Cancelar</div>
+                        <button class="btn-b-modal">Sim, excluir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

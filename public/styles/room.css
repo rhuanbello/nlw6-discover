@@ -1,0 +1,196 @@
+/* html { height:100%; } */
+
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+header nav.content {
+    width: 80%;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav.content .buttons {
+    display: flex;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+main .content {
+    width: 80%;
+    /* display: flex;   */
+    /* height: 100%; */
+}
+
+.container-fthr {
+    position:absolute; top:0; bottom:0; right:0; left:0;
+    /* min-height: 100vh; */
+    background-image: url('/images/bg.svg'), url('/images/black.svg');
+    background-size: cover;
+    animation: bgAnimation 10s linear infinite;
+}
+
+
+main.container-sn {
+    color: white;
+    display: flex;
+    justify-content: center;  
+    padding-bottom: 3rem;
+}
+
+
+.btn-white {
+    color: rgb(0, 0, 0);
+    height: 0;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 2.2rem 3rem;
+    border-radius: 1rem;
+    font-weight: 600;
+
+}
+
+.btn-white:hover {
+    background-image: linear-gradient(to right, #48038c, #440384, #40027d, #3c0275, #38026e, #350268, #320262, #2f025c, #2c0256, #290251, #27024b, #240246);
+    color: #fff;
+}
+
+#question-form h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 4.2rem;
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2.4rem;
+}
+
+#question-form form {
+    background: #fff;
+    padding: 1.6rem;
+    border-radius: 0 .8rem .8rem .8rem;
+    margin-bottom: 1.6rem;
+    /* width: 100%; */
+}
+
+.noquestion {
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#question-form textarea {
+    resize: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    font-size: clamp(14px, 1.6rem, 2vw);  
+    font-family: 'Poppins';
+    color: purple;
+}
+
+#question-form form textarea::placeholder {
+    font-family: 'Poppins';
+    line-height: 2.2rem;
+    color: #A1B2CD;
+}
+
+#question-form form footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#question-form form footer > div {
+    display: flex;
+    align-items: center;
+    color: #868f9c;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    
+}
+
+#question-form form .btn-gradient {
+    height: auto;
+    width: auto;
+    padding: .8rem 2.4rem;
+    line-height: 2.4rem;
+}
+
+#question-form form footer > div img {
+    margin-right: .9rem;
+}
+
+/* Question Wrapper */
+
+.question-wrapper {
+    background: #48038C;
+    padding: 2.4rem 3.2rem 2.4rem 2.4rem;
+    margin-bottom: .8rem;
+    border-radius: 0 .8rem .8rem .8rem;
+}
+
+.question-wrapper .question-content {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+}
+
+.question-wrapper .question-content .question p {
+    color: #fff;
+    margin-left: 1.6rem;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    min-height: 5.2rem;
+}
+
+.question-wrapper .actions{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.question-wrapper .actions a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.question-wrapper .actions a + a{
+    margin-left: 2.4rem;
+}
+
+.question-wrapper .actions a img {
+    margin-right: .8rem;
+}
+
+/* Question Read */
+
+.question-wrapper.read {
+    background: #240246;
+}
+
+.btn-black {
+    color: #fff;
+    height: 0;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    background: #000;
+    display: flex;
+    align-items: center;
+    padding: 2.5rem 3rem;
+    border-radius: 1rem;
+    font-weight: 600;
+}

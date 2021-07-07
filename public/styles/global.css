@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    
+}
+
+@keyframes bgAnimation {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+    100% {
+        background-position: 100% 0, 100% 0;
+    }
+}
+
+@keyframes jumpRocket {
+    from {
+        bottom: 32rem;
+        right: 43rem;
+    }
+    to {
+        bottom: 34rem;
+        right: 43rem;
+    }
+}
+
+@keyframes jumpMan {
+    from {
+        bottom: 35.5rem;
+        right: 32rem;
+    }
+    to {
+        bottom: 37.5rem;
+        right: 32rem;
+    }
+}
+
+.container-fth {
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/bg.svg'), url('/images/black.svg');
+    background-size: cover;
+    animation: bgAnimation 10s linear infinite;
+}
+
+.header-wbg {
+    background-image: linear-gradient(to right, #48038c, #440384, #40027d, #3c0275, #38026e, #350268, #320262, #2f025c, #2c0256, #290251, #27024b, #240246);
+    display: flex;
+    justify-content: center;
+}
+
+/* BTN */
+
+.btn-black {
+    color: #fff;
+    height: 0;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    background: #000;
+    display: flex;
+    align-items: center;
+    padding: 2.5rem 3rem;
+    border-radius: 1rem;
+    font-weight: 600;
+}
+
+
+.btn-black:hover {
+    filter: brightness(1);
+    background-color: #48038C;
+}
+
+.btn-gradient {
+    padding: 1.3rem;
+    border-radius: 1rem;
+    background-image: linear-gradient(to right, #48038c, #440384, #40027d, #3c0275, #38026e, #350268, #320262, #2f025c, #2c0256, #290251, #27024b, #240246);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-gradient:hover {
+    filter: brightness(1.5);
+}
+
+.btn-outlined{
+    background: #000;
+    color: #fff;
+    border: .2rem solid #fff;
+    border-radius: .8rem;
+    display: flex;
+    align-items: center;
+    /* line-height: 2.5rem; */
+    margin-right: 3rem;
+    height: 0;
+    padding: 2rem 3rem;
+    text-align: center;
+}
+
+/* Background Items */
+
+.ball {
+    position: fixed;
+    
+}
+
+.ball.bottom {
+    background-image: url('/images/ball-bottom.svg');
+    width: 2.8rem;
+    height: 2.8rem;
+    bottom: 5rem;
+    left: 83rem;
+}
+
+.ball.left {
+    background-image: url('/images/ball-left.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 6rem;
+    height: 6rem;
+    left: 5rem;
+    bottom: 15rem;
+}
+
+.ball.middle{
+    background-image: url('/images/ball-middle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1.5rem;
+    height: 1.5rem;
+    bottom: 20rem;
+    left: 70rem;
+}
+
+.ball.top{
+    background-image: url('/images/ball-top.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 5.8rem;
+    height: 5.8rem;
+    bottom: 30rem;
+    left: 90rem;
+}
+
+.ball.rocket{
+    background-image: url('/images/rocket.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 5rem;
+    height: 5rem;
+    bottom: 32rem;
+    right: 43rem;
+    /* animation: jumpRocket 4s ease-in 0s infinite alternate */
+}
+
+.moon {
+    background-image: url('/images/Moon.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 40rem;
+    height: 39rem;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.spaceman {
+    background-image: url('/images/Spaceman.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 6rem;
+    height: 9rem;
+    bottom: 35.5rem;
+    right: 32rem;
+    animation: jumpMan 2s infinite alternate;
+}
+
+
+span {
+    display: block;
+}
+
+/* .btn-b-modal.red {
+    background: #000;
+    cursor: pointer;
+}
+
+.btn-b-modal.red:hover {
+    background: #E83F5B;
+} */
