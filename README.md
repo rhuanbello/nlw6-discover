@@ -1,6 +1,6 @@
 # Rocket.Q
 
-![https://im3.ezgif.com/tmp/ezgif-3-8b7da9fe256b.gif](https://im3.ezgif.com/tmp/ezgif-3-8b7da9fe256b.gif)
+![https://i.imgur.com/4CwoWFh.gif](https://i.imgur.com/4CwoWFh.gif)
 
 ## 📖 Sobre
 
@@ -33,7 +33,7 @@ Você pode visualizar os layouts do projeto abaixo:
 
 ## 💻 **Demonstração**
 
-![https://im3.ezgif.com/tmp/ezgif-3-785979c56813.gif](https://im3.ezgif.com/tmp/ezgif-3-785979c56813.gif)
+![https://media.giphy.com/media/3WqxVk3faQtzfBUjMl/giphy.gif](https://media.giphy.com/media/3WqxVk3faQtzfBUjMl/giphy.gif)
 
 ---
 
